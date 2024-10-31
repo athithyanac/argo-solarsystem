@@ -1,0 +1,23 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: solarsystem-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: solarsystem
+  template:
+    metadata:
+      labels:
+        app: solarsystem
+    spec:
+      containers:
+      - name: solarsystem
+        image: solarsystem:latest  # Replace with your actual image
+        ports:
+        - containerPort: 80
+        env:
+        - name: PLANET
+          value: "Earth"  # Example environment variable
