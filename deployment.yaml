@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: solarsystem
-        image: solarsystem:latest  # Replace with your actual image
+        image: nginx:latest  # Replace with your actual image
         ports:
         - containerPort: 80
         env:
